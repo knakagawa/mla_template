@@ -1,0 +1,30 @@
+@book{9781594206276,
+  Author = {Aziz Ansari and Eric Klinenberg},
+  Title = {Modern Romance},
+  Publisher = {Penguin Press},
+  Year = {2015},
+  ISBN = {1594206279},
+  URL = {http://www.amazon.com/Modern-Romance-Aziz-Ansari/dp/1594206279%3FSubscriptionId%3D0JYN1NVW651KCA56C102%26tag%3Dtechkie-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1594206279}
+}
+
+// films need to be marked down as an unpublished entry because
+// biblatex explicitly disallows the misc type, as well as some others, so
+// (ab)use unpublished as a workaround
+// http://tex.stackexchange.com/questions/160158/use-misc-in-biblatex-mla
+// see https://github.com/jmclawson/biblatex-mla/blob/master/doc/handbooksamples.bib
+// for examples of usable entry types
+@movie{capra01aa,
+	Annote = {This is the citation for a video entrytype. I found this source listed in the \emph{MLA Style Manual}.},
+	Date-Added = {2008-05-08 13:29:17 +0100},
+	Date-Modified = {2008-10-20 19:05:07 +0100},
+	Editor = {Frank Capra},
+	Editortype = {director},
+	Howpublished = {DVD},
+	Namea = {James Stewart and Donna Read and Lionel Barrymore and Thomas Mitchell},
+	Nameatype = {performers},
+	Options = {useeditor=false},
+	Origdate = {1946},
+	Publisher = {Republic},
+	Title = {It's a Wonderful Life},
+	Year = {2001}
+}

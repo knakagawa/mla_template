@@ -1,0 +1,61 @@
+%12pt font, letterpaper size paper
+\documentclass[12pt,letterpaper]{article}
+\usepackage[american]{babel}
+
+\usepackage{csquotes}
+\usepackage[style=mla,backend=biber]{biblatex}
+
+% Enable links
+\usepackage{hyperref}
+
+% Margin - 1 inch on all sides
+\usepackage[letterpaper]{geometry}
+\geometry{top=1.0in, bottom=1.0in, left=1.0in, right=1.0in}
+
+% Doublespacing
+\usepackage{setspace}
+\doublespacing{}
+
+% Setting the font
+\usepackage{times}
+
+%wee upper right page numbering
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Nakagawa \thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% add the resource that contains all the references
+\addbibresource{bibliography.bib}
+
+\begin{document}
+\begin{flushleft}
+
+%%%%First page name, class, etc
+Firstname Lastname\\ % student name
+Prof.\ Lastname \\ % professor's name
+Course title \\ % course name / course number
+\today
+
+%%%%Title
+\begin{center}
+Paper title.
+\end{center}
+
+%%%%Changes paragraph indentation to 0.5in
+\setlength{\parindent}{0.5in}
+
+% Inserts content of generated content.tex file here.
+\input{content}
+
+% Include everything in the bibliography.bib file in the works
+% cited page, even if its not directly cited
+\nocite{*}
+
+\end{flushleft}
+
+%Adds mla citations on the last page
+\newpage
+\printbibliography{}
+\end{document}
